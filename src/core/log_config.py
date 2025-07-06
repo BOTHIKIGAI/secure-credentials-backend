@@ -15,6 +15,15 @@ def setup_logging():
     1. Call `setup_logging()` at the start of your application.
     2. Set the environment variable `LOG_LEVEL` to control the logging level.
     Supported levels: DEBUG, INFO, WARNING, ERROR, CRITICAL.
+    3. The default level is INFO if `LOG_LEVEL` is not set.
+
+    Example:
+        import logging
+        from your_module import setup_logging
+
+        setup_logging()
+        logger = logging.getLogger(__name__)
+        logger.info("This is an info message.")
 
     """
     log_level = os.getenv("LOG_LEVEL", "INFO").upper()
