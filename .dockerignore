@@ -1,16 +1,23 @@
+# Git
+.git
+.gitignore
+
+# Docker
+Dockerfile
+.dockerignore
+
+# Entorno virtual
+.venv/
+venv/
+
+# Caché de Python
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-.Python
-.env
-.venv
-env/
-venv/
-ENV/
-.git
-.gitignore
+
+# Herramientas de desarrollo
 .vscode/
-Dockerfile
-docker-compose.yml
-README.md
+.ruff_cache/
+.pre-commit-config.yaml
+ruff.toml
