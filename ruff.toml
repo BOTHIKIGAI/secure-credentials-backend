@@ -1,0 +1,30 @@
+exclude = [
+    "__init__.py",
+    "__pycache__",
+    "docs",
+    ".vscode",
+]
+
+fix = true
+
+indent-width = 4
+
+line-length = 79
+
+output-format = "grouped"
+
+show-fixes = true
+
+src = ["src"]
+
+target-version = "py312"
+
+[format]
+docstring-code-format = true
+docstring-code-line-length = 72
+indent-style = "space"
+line-ending = "lf"
+
+[lint]
+select = ["FAST", "ASYNC", "CPY", "D", "F", "PL", "RUF"]
+ignore = ["D212"]

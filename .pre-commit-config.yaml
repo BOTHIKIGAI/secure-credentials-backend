@@ -1,0 +1,25 @@
+repos:
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.12.2
+  hooks:
+    - id: ruff-check
+    - id: ruff-format
+
+- repo: local
+  hooks:
+    - id: check-license-header
+      name: Check License Header
+      entry: |
+        bash -c '
+        LICENSE_LINE="Copyright (c) 2025 Juan Esteban Cajiao Madero"
+        MISSING=0
+        for FILE in $(git diff --cached --name-only --diff-filter=ACM "*.py"); do
+          if ! head -n 2 "$FILE" | grep -q "$LICENSE_LINE"; then
+            echo "File without license header: $FILE"
+            MISSING=1
+          fi
+        done
+        exit $MISSING
+        '
+      language: system
+      stages: [commit]
