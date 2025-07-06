@@ -22,4 +22,4 @@ repos:
         exit $MISSING
         '
       language: system
-      stages: [commit]
+      stages: [pre-commit]
