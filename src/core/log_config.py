@@ -1,3 +1,5 @@
+# Copyright (c) 2025 Juan Esteban Cajiao Madero
+
 """Sets up the logging configuration for the application."""
 
 import logging
